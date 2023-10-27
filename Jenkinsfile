@@ -11,7 +11,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 // Get the code from the version control system.
-                checkout ([$class: 'GitSCM', branches: [${BRANCH_NAME}], extensions: [], userRemoteConfigs: [[credentialsId: 'etechapp-id', url: 'https://github.com/E-V-C/webapp.git']]])
+                checkout ([$class: 'GitSCM', branches: [${BRANCH_NAME}], extensions: [], userRemoteConfigs: [[credentialsId: 'Docker_Credential_ID', url: 'https://github.com/E-V-C/webapp.git']]])
             }
         }
 
