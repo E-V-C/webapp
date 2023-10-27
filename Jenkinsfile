@@ -47,7 +47,7 @@ pipeline {
                 script {
                     // SSH into EC2 and run the Docker container
                     sh '''!/bin/bash
-                    ssh -i "team7key2.pem" ubuntu@172.31.29.243 "docker pull ${DOCKER_IMAGE}:${BRANCH_NAME}; docker run -d -p 80:5000 ${DOCKER_IMAGE}:${BRANCH_NAME}"
+                    ssh -i "team7key2.pem" ubuntu@172.31.29.243 "docker pull ${my-flask-app}:${BRANCH_NAME}; docker run -d -p 80:5000 ${my-flask-app}:${BRANCH_NAME}"
                     '''
                 }
             }
